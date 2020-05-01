@@ -1,0 +1,77 @@
+$color-main1:RGB(87,156,135);
+$color-main-font:RGB(253,203,70);
+$color-card1:RGB(252,223,219);
+$color-card2:RGB(255,245,254);
+
+@mixin principalTheme{
+    background-color:$color-main1;
+    color:$color-main-font;
+
+}
+
+body{
+    margin:0;
+}
+
+#page{
+    margin:auto;
+    max-width: 960px;
+}
+
+header{
+    text-align: center;
+    @include principalTheme;
+}
+
+h1{
+    margin-top:0;
+    padding:.5em;
+}
+
+.container{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin:20px;
+    &--display-spaceB{
+        justify-content: space-between;
+    }
+    &--align-center{
+        align-items: center;
+    }
+}
+
+.card{
+    margin:15px;
+    box-shadow: 2px 2px grey;
+    height: 250px;
+    width:200px;
+    text-align: center;
+
+    &--card1{
+        background-color: $color-card1;
+    }
+    &--card2{
+        background-color: $color-card2;
+    }
+}
+
+footer{
+    @include principalTheme;
+    & a{
+        font-size: 1.2rem;
+        color:$color-main-font;
+        text-decoration: none;
+        font-weight: bold;
+        padding:.5em
+    }
+
+}
+
+.btn{
+    @include principalTheme;
+    padding:10px 100px 10px 100px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+}
