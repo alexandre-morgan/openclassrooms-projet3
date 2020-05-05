@@ -86,3 +86,21 @@ footer{
     margin:auto;
     text-align: center;
 }
+
+.menu-title{
+    flex:4;
+
+    /*Test for line appear with hover*/
+    &:hover{
+        .line{
+            height:12px; 
+            margin:44px 0; 
+            background-color:gray;
+        }
+    }
+}
+
+.line{
+    flex:4;
+}
+

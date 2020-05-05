@@ -77,4 +77,18 @@ footer a {
   text-align: center;
 }
 
+.menu-title {
+  flex: 4;
+  /*Test for line appear with hover*/
+}
+.menu-title:hover .line {
+  height: 12px;
+  margin: 44px 0;
+  background-color: gray;
+}
+
+.line {
+  flex: 4;
+}
+
 /*# sourceMappingURL=style.css.map */
