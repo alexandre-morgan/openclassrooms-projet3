@@ -40,12 +40,15 @@ h1{
     &--align-center{
         align-items: center;
     }
+    &--display-normal{
+        justify-content: start;
+    }
 }
 
 .card{
     margin:15px;
     box-shadow: 2px 2px grey;
-    height: 250px;
+    height: 300px;
     width:200px;
     text-align: center;
 
@@ -74,4 +77,12 @@ footer{
     padding:10px 100px 10px 100px;
     border-radius: 10px;
     font-size: 1.5rem;
+    text-decoration: none;
+}
+
+#menu{
+    width: 80%;
+    background-color: $color-card1;
+    margin:auto;
+    text-align: center;
 }
