@@ -1,6 +1,7 @@
 $color-main1:RGB(87,156,135);
 $color-main-font:RGB(253,203,70);
 $color-card1:RGB(252,223,219);
+$color-line-card1:grey;
 $color-card2:RGB(255,245,254);
 
 @mixin principalTheme{
@@ -91,16 +92,21 @@ footer{
     flex:4;
 
     /*Test for line appear with hover*/
-    &:hover{
-        .line{
-            height:12px; 
-            margin:44px 0; 
-            background-color:gray;
-        }
+    &:hover + .line{
+        background-color: $color-line-card1;
     }
 }
 
 .line{
     flex:4;
+    background-color: $color-card1;
+
+    transition: all 1000ms;
+    
 }
 
+/*
+height:12px; 
+margin:44px 0; 
+background-color:gray;
+*/
