@@ -9,7 +9,7 @@ body {
 
 header {
   text-align: center;
-  background-color: RGB(87, 156, 135);
+  background-color: #579C87;
   color: RGB(253, 203, 70);
 }
 
@@ -41,6 +41,8 @@ h1 {
   height: 300px;
   width: 200px;
   text-align: center;
+  /* For animation*/
+  overflow: hidden;
 }
 .card--card1 {
   background-color: RGB(252, 223, 219);
@@ -48,9 +50,16 @@ h1 {
 .card--card2 {
   background-color: RGB(255, 245, 254);
 }
+.card:hover .card-contenu {
+  animation: zoom-card 1s forwards;
+}
+
+* a {
+  text-decoration: none;
+}
 
 footer {
-  background-color: RGB(87, 156, 135);
+  background-color: #579C87;
   color: RGB(253, 203, 70);
 }
 footer a {
@@ -62,7 +71,7 @@ footer a {
 }
 
 .btn {
-  background-color: RGB(87, 156, 135);
+  background-color: #579C87;
   color: RGB(253, 203, 70);
   padding: 10px 100px 10px 100px;
   border-radius: 10px;
@@ -96,5 +105,54 @@ height:12px;
 margin:44px 0; 
 background-color:gray;
 */
+/* Wiggle animation for footer's buttons */
+.wiggle:hover {
+  animation: wiggle 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 3;
+}
+
+@keyframes wiggle {
+  25% {
+    transform: translateX(1%);
+  }
+  75% {
+    transform: translateX(-1%);
+  }
+}
+/* Points appearing animation for 'Prochainement' button */
+.btn:hover .point {
+  animation: points-appearing 1000ms backwards infinite alternate;
+}
+.btn:hover .point--1 {
+  animation-delay: 333.3333333333ms;
+}
+.btn:hover .point--2 {
+  animation-delay: 666.6666666667ms;
+}
+.btn:hover .point--3 {
+  animation-delay: 1000ms;
+}
+
+.point {
+  height: 100px;
+  opacity: 0;
+}
+
+@keyframes points-appearing {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* Animation for cards */
+@keyframes zoom-card {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
