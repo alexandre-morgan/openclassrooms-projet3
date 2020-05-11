@@ -37,7 +37,7 @@ h1 {
 
 .card {
   margin: 15px;
-  box-shadow: 2px 2px grey;
+  box-shadow: 1px 1px 5px #c2c2c2;
   height: 300px;
   width: 200px;
   text-align: center;
@@ -51,7 +51,7 @@ h1 {
   background-color: RGB(255, 245, 254);
 }
 .card:hover .card-contenu {
-  animation: zoom-card 1s forwards;
+  animation: zoom-card forwards 0.3s;
 }
 
 * a {
@@ -92,6 +92,7 @@ footer a {
   background-color: RGB(252, 223, 219);
   margin: auto;
   text-align: center;
+  box-shadow: 1px 1px 5px #c2c2c2;
 }
 
 .menu-title {
@@ -145,6 +146,7 @@ background-color:gray;
   opacity: 0;
 }
 
+/* Animation for 'Prochainement button' with points */
 @keyframes points-appearing {
   0% {
     opacity: 0;
@@ -157,9 +159,11 @@ background-color:gray;
 @keyframes zoom-card {
   from {
     transform: scale(1);
+    opacity: 1;
   }
   to {
-    transform: scale(1.2);
+    transform: scale(1.1);
+    opacity: 0.6;
   }
 }
 
