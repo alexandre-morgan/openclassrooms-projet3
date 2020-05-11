@@ -72,12 +72,21 @@ h1{
 
 footer{
     @include principalTheme;
+    height: auto;
+    position: sticky;
+    bottom: 0;
+
+    & .container{
+        height:auto;
+        padding:1em;
+        margin-bottom:0;
+    }
     & a{
         font-size: 1.2rem;
         color:$color-main-font;
         text-decoration: none;
         font-weight: bold;
-        padding:.5em
+        padding:0.8em;
     }
 
 }
