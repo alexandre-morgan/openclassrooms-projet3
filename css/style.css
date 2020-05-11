@@ -12,6 +12,10 @@ header {
   background-color: #579C87;
   color: RGB(253, 203, 70);
 }
+header a {
+  color: RGB(253, 203, 70);
+  text-decoration: none;
+}
 
 h1 {
   margin-top: 0;
@@ -35,6 +39,11 @@ h1 {
   justify-content: start;
 }
 
+#cards a {
+  text-decoration: none;
+  color: black;
+}
+
 .card {
   margin: 15px;
   box-shadow: 1px 1px 5px #c2c2c2;
@@ -54,16 +63,16 @@ h1 {
   animation: zoom-card forwards 0.3s;
 }
 
-* a {
-  text-decoration: none;
-}
-
 footer {
   background-color: #579C87;
   color: RGB(253, 203, 70);
   height: auto;
   position: sticky;
   bottom: 0;
+}
+footer a {
+  color: RGB(253, 203, 70);
+  text-decoration: none;
 }
 footer .container {
   height: auto;
@@ -84,6 +93,10 @@ footer a {
   padding: 10px 100px 10px 100px;
   border-radius: 10px;
   font-size: 1.5rem;
+  text-decoration: none;
+}
+.btn a {
+  color: RGB(253, 203, 70);
   text-decoration: none;
 }
 

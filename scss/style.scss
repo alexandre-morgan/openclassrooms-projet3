@@ -7,6 +7,10 @@ $color-card2:RGB(255,245,254);
 @mixin principalTheme{
     background-color:$color-main1;
     color:$color-main-font;
+    a{
+        color:$color-main-font;
+        text-decoration: none;
+    }
 
 }
 
@@ -46,6 +50,13 @@ h1{
     }
 }
 
+#cards{
+    & a{
+        text-decoration: none;
+        color:black;
+    }
+}
+
 .card{
     margin:15px;
     box-shadow: 1px 1px 5px rgb(194, 194, 194);
@@ -66,9 +77,6 @@ h1{
     }
 }
 
-* a{
-    text-decoration: none;
-}
 
 footer{
     @include principalTheme;
