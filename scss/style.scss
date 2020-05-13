@@ -38,6 +38,7 @@ h1{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
     margin:20px;
     &--display-spaceB{
         justify-content: space-between;
@@ -115,28 +116,7 @@ footer{
     box-shadow: 1px 1px 5px rgb(194, 194, 194);
 }
 
-.menu-title{
-    flex:4;
 
-    /*Test for line appear with hover*/
-    &:hover + .line{
-        background-color: $color-line-card1;
-    }
-}
-
-.line{
-    flex:4;
-    background-color: $color-card1;
-
-    transition: all 1000ms;
-    
-}
-
-/*
-height:12px; 
-margin:44px 0; 
-background-color:gray;
-*/
 
 /* Wiggle animation for footer's buttons */
 $wiggle-intensity:1%;
@@ -202,3 +182,40 @@ $point-appear-delay:$anim-dur / $num-points;
         opacity:0.6;
     }
 }
+
+/* Animation for menu title */
+$thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
+
+/* Property of underlines */
+@mixin menu-title-line {
+    content:'';
+    width:3em;
+    border-bottom:rgba(226, 12, 12, 0.3) solid;
+    vertical-align:middle;
+    display: inline-block;
+    opacity: 0;
+    transition: $thetransition;
+    transform:scaleX(0);
+}
+
+.menu-title{
+    &:before {
+        @include menu-title-line;
+        transform-origin:left;
+    }
+    &:after{
+        @include menu-title-line;
+        transform-origin:right;
+    }
+    &:hover{
+        &:before{
+            opacity: 1;
+            transform:scaleX(1);
+        }
+        &:after{
+            opacity: 1;
+            transform:scaleX(1);
+        }
+    }
+}
+
