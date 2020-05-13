@@ -1,3 +1,6 @@
+/*Card 2*/
+/*Card 3*/
+/*Card 3*/
 body {
   margin: 0;
 }
@@ -47,8 +50,8 @@ h1 {
 .card {
   margin: 15px;
   box-shadow: 1px 1px 5px #c2c2c2;
-  height: 300px;
-  width: 200px;
+  height: 350px;
+  width: 250px;
   text-align: center;
   /* For animation*/
   overflow: hidden;
@@ -109,6 +112,7 @@ footer a {
 .menu {
   width: 80%;
   margin: auto;
+  padding: 0.5em;
   text-align: center;
   box-shadow: 1px 1px 5px #c2c2c2;
 }
@@ -118,11 +122,48 @@ footer a {
 .menu--card2 {
   background-color: RGB(255, 245, 254);
 }
+.menu--card2__entree {
+  color: #C67412;
+}
+.menu--card2__plat {
+  color: #A56799;
+}
+.menu--card2__dessert {
+  color: #6E4CCC;
+}
 .menu--card3 {
   background-color: RGB(237, 239, 239);
 }
 .menu--card4 {
   background-color: RGB(253, 253, 253);
+}
+
+.card-title {
+  text-align: center;
+}
+.card-title--2 {
+  background: linear-gradient(150deg, #C67412 0% 35%, #6E4CCC 65% 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card-title--2__menu {
+  color: #C67412;
+}
+.card-title--3 {
+  background: linear-gradient(150deg, #0228DD 0% 35%, #229DF9 65% 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card-title--3__menu {
+  color: #0228DD;
+}
+.card-title--4 {
+  background: linear-gradient(150deg, #3E923A 0% 35%, #BEFF7F 65% 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card-title--4__menu {
+  color: #3E923A;
 }
 
 /* Wiggle animation for footer's buttons */
@@ -186,7 +227,7 @@ footer a {
   vertical-align: middle;
   display: inline-block;
   opacity: 0;
-  transition: all 0.5s cubic-bezier(1, 0.25, 0, 0.75) 0s;
+  transition: all 0.5s 0s ease-out;
   transform: scaleX(0);
   transform-origin: left;
 }
@@ -197,7 +238,7 @@ footer a {
   vertical-align: middle;
   display: inline-block;
   opacity: 0;
-  transition: all 0.5s cubic-bezier(1, 0.25, 0, 0.75) 0s;
+  transition: all 0.5s 0s ease-out;
   transform: scaleX(0);
   transform-origin: right;
 }

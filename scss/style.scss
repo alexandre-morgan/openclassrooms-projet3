@@ -1,9 +1,23 @@
 $color-main1:#579C87;
 $color-main-font:RGB(253,203,70);
 $color-card1:RGB(252,223,219);
+
+/*Card 2*/
 $color-card2:RGB(255,245,254);
+$text-color-start-card2:#C67412;
+$text-color-middle-card2:#A56799;
+$text-color-end-card2:#6E4CCC;
+
+/*Card 3*/
 $color-card3:RGB(237,239,239);
+$text-color-start-card3:#0228DD;
+$text-color-middle-card3:#0670F3;
+$text-color-end-card3:#229DF9;
+
+/*Card 3*/
 $color-card4:RGB(253,253,253);
+$text-color-start-card4: #3E923A;
+$text-color-end-card4:#BEFF7F;
 
 
 
@@ -36,6 +50,7 @@ h1{
     padding:.5em;
 }
 
+
 .container{
     display:flex;
     flex-wrap: wrap;
@@ -64,8 +79,8 @@ h1{
 .card{
     margin:15px;
     box-shadow: 1px 1px 5px rgb(194, 194, 194);
-    height: 300px;
-    width:200px;
+    height: 350px;
+    width:250px;
     text-align: center;
 
     &--card1{
@@ -120,6 +135,7 @@ footer{
 .menu{
     width: 80%;
     margin:auto;
+    padding:0.5em;
     text-align: center;
     box-shadow: 1px 1px 5px rgb(194, 194, 194);
 
@@ -128,6 +144,15 @@ footer{
     }
     &--card2{
         background-color: $color-card2;
+        &__entree{
+            color:$text-color-start-card2;
+        }
+        &__plat{
+            color:$text-color-middle-card2;
+        }
+        &__dessert{
+            color:$text-color-end-card2;
+        }
     }
     &--card3{
         background-color: $color-card3;
@@ -137,6 +162,36 @@ footer{
     }
 }
 
+.card-title{
+    text-align: center;
+    &--2{
+        background: linear-gradient(150deg, $text-color-start-card2 0% 35%, $text-color-end-card2 65% 100% );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        &__menu{
+            color:$text-color-start-card2;
+        }
+    }
+    &--3{
+        background: linear-gradient(150deg, $text-color-start-card3 0% 35%, $text-color-end-card3 65% 100% );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        &__menu{
+            color:$text-color-start-card3;
+        }
+    }
+    &--4{
+        background: linear-gradient(150deg, $text-color-start-card4 0% 35%, $text-color-end-card4 65% 100% );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        &__menu{
+            color:$text-color-start-card4;
+        }
+
+    }
+
+    
+}
 
 
 /* Wiggle animation for footer's buttons */
@@ -205,7 +260,7 @@ $point-appear-delay:$anim-dur / $num-points;
 }
 
 /* Animation for menu title */
-$thetransition: all .5s cubic-bezier(1,.25,0,.75) 0s;
+$thetransition: all .5s 0s ease-out;
 
 /* Property of underlines */
 @mixin menu-title-line {
