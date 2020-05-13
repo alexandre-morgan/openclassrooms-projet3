@@ -1,8 +1,11 @@
 $color-main1:#579C87;
 $color-main-font:RGB(253,203,70);
 $color-card1:RGB(252,223,219);
-$color-line-card1:grey;
 $color-card2:RGB(255,245,254);
+$color-card3:RGB(237,239,239);
+$color-card4:RGB(253,253,253);
+
+
 
 @mixin principalTheme{
     background-color:$color-main1;
@@ -71,6 +74,12 @@ h1{
     &--card2{
         background-color: $color-card2;
     }
+    &--card3{
+        background-color: $color-card3;
+    }
+    &--card4{
+        background-color: $color-card4;
+    }
     /* For animation*/
     overflow: hidden;
     &:hover .card-contenu {
@@ -108,12 +117,24 @@ footer{
     text-decoration: none;
 }
 
-#menu{
+.menu{
     width: 80%;
-    background-color: $color-card1;
     margin:auto;
     text-align: center;
     box-shadow: 1px 1px 5px rgb(194, 194, 194);
+
+    &--card1{
+        background-color: $color-card1;
+    }
+    &--card2{
+        background-color: $color-card2;
+    }
+    &--card3{
+        background-color: $color-card3;
+    }
+    &--card4{
+        background-color: $color-card4;
+    }
 }
 
 

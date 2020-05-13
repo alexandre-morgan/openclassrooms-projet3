@@ -59,6 +59,12 @@ h1 {
 .card--card2 {
   background-color: RGB(255, 245, 254);
 }
+.card--card3 {
+  background-color: RGB(237, 239, 239);
+}
+.card--card4 {
+  background-color: RGB(253, 253, 253);
+}
 .card:hover .card-contenu {
   animation: zoom-card forwards 0.3s;
 }
@@ -100,12 +106,23 @@ footer a {
   text-decoration: none;
 }
 
-#menu {
+.menu {
   width: 80%;
-  background-color: RGB(252, 223, 219);
   margin: auto;
   text-align: center;
   box-shadow: 1px 1px 5px #c2c2c2;
+}
+.menu--card1 {
+  background-color: RGB(252, 223, 219);
+}
+.menu--card2 {
+  background-color: RGB(255, 245, 254);
+}
+.menu--card3 {
+  background-color: RGB(237, 239, 239);
+}
+.menu--card4 {
+  background-color: RGB(253, 253, 253);
 }
 
 /* Wiggle animation for footer's buttons */
