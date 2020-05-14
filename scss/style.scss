@@ -1,6 +1,12 @@
 $color-main1:#579C87;
 $color-main-font:RGB(253,203,70);
+
+/*Card 1*/
 $color-card1:RGB(252,223,219);
+$text-color-card1:#3D1319;
+$icon-color-start-card1:#EF465F;
+$icon-color-end-card1:#F6916A;
+
 
 /*Card 2*/
 $color-card2:RGB(255,245,254);
@@ -140,6 +146,7 @@ footer{
     box-shadow: 1px 1px 5px rgb(194, 194, 194);
 
     &--card1{
+        color:$text-color-card1;
         background-color: $color-card1;
     }
     &--card2{
@@ -164,6 +171,14 @@ footer{
 
 .card-title{
     text-align: center;
+    &--1{
+        background: linear-gradient(135deg, $icon-color-start-card1 0% 35%, $icon-color-end-card1 65% 100% );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        &__menu{
+            color:$text-color-card1;
+        }
+    }
     &--2{
         background: linear-gradient(150deg, $text-color-start-card2 0% 35%, $text-color-end-card2 65% 100% );
         -webkit-background-clip: text;

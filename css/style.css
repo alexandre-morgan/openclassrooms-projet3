@@ -1,3 +1,4 @@
+/*Card 1*/
 /*Card 2*/
 /*Card 3*/
 /*Card 3*/
@@ -117,6 +118,7 @@ footer a {
   box-shadow: 1px 1px 5px #c2c2c2;
 }
 .menu--card1 {
+  color: #3D1319;
   background-color: RGB(252, 223, 219);
 }
 .menu--card2 {
@@ -140,6 +142,14 @@ footer a {
 
 .card-title {
   text-align: center;
+}
+.card-title--1 {
+  background: linear-gradient(135deg, #EF465F 0% 35%, #F6916A 65% 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card-title--1__menu {
+  color: #3D1319;
 }
 .card-title--2 {
   background: linear-gradient(150deg, #C67412 0% 35%, #6E4CCC 65% 100%);
