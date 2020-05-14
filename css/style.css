@@ -1,7 +1,35 @@
 /*Card 1*/
+/* Menu font */
+@font-face {
+  font-family: handlee;
+  src: url(../fonts/Handlee-Regular.ttf);
+}
+/*Title of card 1 font*/
+@font-face {
+  font-family: shadowsIntoLight;
+  src: url(../fonts/ShadowsIntoLight-Regular.ttf);
+}
 /*Card 2*/
+/*Title of card 1 font*/
+@font-face {
+  font-family: abrilFatface;
+  src: url(../fonts/AbrilFatface-Regular.ttf);
+}
 /*Card 3*/
-/*Card 3*/
+@font-face {
+  font-family: parisienne;
+  src: url(../fonts/Parisienne-Regular.ttf);
+}
+@font-face {
+  font-family: caveat;
+  src: url(../fonts/Caveat-Regular.ttf);
+}
+/*Card 4*/
+@font-face {
+  font-family: kaushan;
+  src: url(../fonts/KaushanScript-Regular.ttf);
+}
+/* Font size for 'menu' of cards */
 body {
   margin: 0;
 }
@@ -120,6 +148,7 @@ footer a {
 .menu--card1 {
   color: #3D1319;
   background-color: RGB(252, 223, 219);
+  font-family: handlee, arial, sans-serif;
 }
 .menu--card2 {
   background-color: RGB(255, 245, 254);
@@ -135,9 +164,11 @@ footer a {
 }
 .menu--card3 {
   background-color: RGB(237, 239, 239);
+  font-family: handlee, arial, sans-serif;
 }
 .menu--card4 {
   background-color: RGB(253, 253, 253);
+  font-family: handlee, arial, sans-serif;
 }
 
 .card-title {
@@ -148,32 +179,52 @@ footer a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.card-title--1__menu {
+.card-title--1__title {
   color: #3D1319;
+  font-family: shadowsIntoLight, arial, sans-serif;
+}
+.card-title--1__menu {
+  font-size: 2.5rem;
+  color: #3D1319;
+  font-family: handlee, arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: bold;
 }
 .card-title--2 {
   background: linear-gradient(150deg, #C67412 0% 35%, #6E4CCC 65% 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-family: abrilFatface, arial, sans-serif;
+  font-weight: normal;
 }
 .card-title--2__menu {
+  font-size: 2.5rem;
+  font-weight: bold;
   color: #C67412;
 }
 .card-title--3 {
   background: linear-gradient(150deg, #0228DD 0% 35%, #229DF9 65% 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-family: parisienne, arial, sans-serif;
 }
 .card-title--3__menu {
-  color: #0228DD;
+  font-size: 2.5rem;
+  color: #229DF9;
+  font-family: handlee, arial, sans-serif;
+  font-weight: bold;
 }
 .card-title--4 {
   background: linear-gradient(150deg, #3E923A 0% 35%, #BEFF7F 65% 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-family: kaushan, arial, sans-serif;
 }
 .card-title--4__menu {
+  font-size: 2.5rem;
   color: #3E923A;
+  font-family: handlee, arial, sans-serif;
+  font-weight: bold;
 }
 
 /* Wiggle animation for footer's buttons */

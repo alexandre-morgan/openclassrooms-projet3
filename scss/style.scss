@@ -7,12 +7,27 @@ $text-color-card1:#3D1319;
 $icon-color-start-card1:#EF465F;
 $icon-color-end-card1:#F6916A;
 
+/* Menu font */
+@font-face {
+    font-family: handlee;
+    src: url(../fonts/Handlee-Regular.ttf);
+}
+/*Title of card 1 font*/
+@font-face {
+    font-family: shadowsIntoLight;
+    src: url(../fonts/ShadowsIntoLight-Regular.ttf);
+}
 
 /*Card 2*/
 $color-card2:RGB(255,245,254);
 $text-color-start-card2:#C67412;
 $text-color-middle-card2:#A56799;
 $text-color-end-card2:#6E4CCC;
+/*Title of card 1 font*/
+@font-face {
+    font-family: abrilFatface;
+    src: url(../fonts/AbrilFatface-Regular.ttf);
+}
 
 /*Card 3*/
 $color-card3:RGB(237,239,239);
@@ -20,11 +35,28 @@ $text-color-start-card3:#0228DD;
 $text-color-middle-card3:#0670F3;
 $text-color-end-card3:#229DF9;
 
-/*Card 3*/
+@font-face {
+    font-family: parisienne;
+    src: url(../fonts/Parisienne-Regular.ttf);
+}
+@font-face {
+    font-family: caveat;
+    src: url(../fonts/Caveat-Regular.ttf);
+}
+
+
+/*Card 4*/
 $color-card4:RGB(253,253,253);
 $text-color-start-card4: #3E923A;
 $text-color-end-card4:#BEFF7F;
 
+@font-face {
+    font-family: kaushan;
+    src: url(../fonts/KaushanScript-Regular.ttf);
+}
+
+/* Font size for 'menu' of cards */
+$font-size-menu-cards:2.5rem;
 
 
 @mixin principalTheme{
@@ -148,6 +180,7 @@ footer{
     &--card1{
         color:$text-color-card1;
         background-color: $color-card1;
+        font-family: handlee,arial,sans-serif;
     }
     &--card2{
         background-color: $color-card2;
@@ -163,9 +196,11 @@ footer{
     }
     &--card3{
         background-color: $color-card3;
+        font-family: handlee,arial,sans-serif;
     }
     &--card4{
         background-color: $color-card4;
+        font-family: handlee,arial,sans-serif;
     }
 }
 
@@ -175,15 +210,27 @@ footer{
         background: linear-gradient(135deg, $icon-color-start-card1 0% 35%, $icon-color-end-card1 65% 100% );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        &__menu{
+        &__title{
             color:$text-color-card1;
+            font-family: shadowsIntoLight,arial,sans-serif;
+        }
+        &__menu{
+            font-size: $font-size-menu-cards;
+            color:$text-color-card1;
+            font-family: handlee,arial,sans-serif;
+            text-transform: uppercase;
+            font-weight: bold;
         }
     }
     &--2{
         background: linear-gradient(150deg, $text-color-start-card2 0% 35%, $text-color-end-card2 65% 100% );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        font-family: abrilFatface,arial,sans-serif;
+        font-weight: normal;
         &__menu{
+            font-size: $font-size-menu-cards;
+            font-weight: bold;
             color:$text-color-start-card2;
         }
     }
@@ -191,16 +238,25 @@ footer{
         background: linear-gradient(150deg, $text-color-start-card3 0% 35%, $text-color-end-card3 65% 100% );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        font-family: parisienne,arial,sans-serif;
         &__menu{
-            color:$text-color-start-card3;
+            font-size: $font-size-menu-cards;
+            color:$text-color-end-card3;
+            font-family: handlee,arial,sans-serif;
+            font-weight: bold;
         }
     }
     &--4{
         background: linear-gradient(150deg, $text-color-start-card4 0% 35%, $text-color-end-card4 65% 100% );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        font-family: kaushan,arial,sans-serif;
+
         &__menu{
+            font-size: $font-size-menu-cards;
             color:$text-color-start-card4;
+            font-family: handlee,arial,sans-serif;
+            font-weight: bold;
         }
 
     }
