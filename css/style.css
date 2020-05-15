@@ -56,9 +56,10 @@ h1 {
 
 .container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: center;
-  align-items: center;
+  align-items: top;
+  text-align: left;
   margin: 20px;
 }
 .container--display-spaceB {
@@ -70,7 +71,13 @@ h1 {
 .container--display-normal {
   justify-content: start;
 }
+.container div {
+  margin: 0.5em;
+}
 
+#cards {
+  margin: auto;
+}
 #cards a {
   text-decoration: none;
   color: black;
@@ -173,6 +180,7 @@ footer a {
 
 .card-title {
   text-align: center;
+  color: RGB(53, 53, 53);
 }
 .card-title--1 {
   background: linear-gradient(135deg, #EF465F 0% 35%, #F6916A 65% 100%);
@@ -224,6 +232,10 @@ footer a {
   font-size: 2.5rem;
   color: #3E923A;
   font-family: handlee, arial, sans-serif;
+  font-weight: bold;
+}
+
+.price {
   font-weight: bold;
 }
 
@@ -310,6 +322,16 @@ footer a {
 .menu-title:hover:after {
   opacity: 1;
   transform: scaleX(1);
+}
+
+/* Media queries */
+/* Small and smaller */
+@media (max-width: 575.98px) {
+  #cards .container {
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 20px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
