@@ -57,7 +57,7 @@ $text-color-end-card4:#B8FA7C;
 }
 
 /* Font size for 'menu' of cards */
-$font-size-menu-cards:1.5rem;
+$font-size-menu-cards:1.3rem;
 
 
 @mixin principalTheme{
@@ -197,6 +197,7 @@ footer{
         color:$text-color-card1;
         background-color: $color-card1;
         font-family: handlee,arial,sans-serif;
+        font-weight: bold;
     }
     &--card2{
         background-color: $color-card2;
@@ -225,6 +226,7 @@ footer{
     }
     &--card3{
         background-color: $color-card3;
+        font-weight: bold;
         font-family: handlee,arial,sans-serif;
         &__entree{
             @include dishes-layout;
@@ -234,6 +236,7 @@ footer{
     &--card4{
         background-color: $color-card4;
         font-family: handlee,arial,sans-serif;
+        font-weight: bold;
         &__entree{
             @include dishes-layout;
         }
@@ -245,6 +248,8 @@ $menu-main-title-size:3em;
 .card-title{
     text-align: center;
     color:$font-color-title-pages;
+    font-family: 'Montserrat', sans-serif;
+    
     &--1{
         background: linear-gradient(135deg, $icon-color-start-card1 0% 35%, $icon-color-end-card1 65% 100% );
         -webkit-background-clip: text;
@@ -257,7 +262,7 @@ $menu-main-title-size:3em;
                 font-size: $menu-main-title-size;
             }
             &--second{
-                font-size:1.2em;
+                font-size:$font-size-menu-cards;
             }
         }
         &__menu{
@@ -266,6 +271,7 @@ $menu-main-title-size:3em;
             font-family: handlee,arial,sans-serif;
             text-transform: uppercase;
             font-weight: bold;
+            font-style: italic;
         }
     }
     &--2{
@@ -503,6 +509,7 @@ $triangle-short-size:(
 }
 .menu-title{
     white-space: nowrap;
+    font-size:$font-size-menu-cards;
 }
 .menu-title-line-p1{
     align-items: center;

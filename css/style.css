@@ -167,6 +167,7 @@ footer a {
   color: #3D1319;
   background-color: RGB(252, 223, 219);
   font-family: handlee, arial, sans-serif;
+  font-weight: bold;
 }
 .menu--card2 {
   background-color: RGB(255, 245, 254);
@@ -197,6 +198,7 @@ footer a {
 }
 .menu--card3 {
   background-color: RGB(237, 239, 239);
+  font-weight: bold;
   font-family: handlee, arial, sans-serif;
 }
 .menu--card3__entree {
@@ -206,6 +208,7 @@ footer a {
 .menu--card4 {
   background-color: RGB(253, 253, 253);
   font-family: handlee, arial, sans-serif;
+  font-weight: bold;
 }
 .menu--card4__entree {
   margin: auto;
@@ -215,6 +218,7 @@ footer a {
 .card-title {
   text-align: center;
   color: RGB(53, 53, 53);
+  font-family: "Montserrat", sans-serif;
 }
 .card-title--1 {
   background: linear-gradient(135deg, #EF465F 0% 35%, #F6916A 65% 100%);
@@ -224,20 +228,21 @@ footer a {
 .card-title--1__title {
   color: #3D1319;
   font-family: shadowsIntoLight, arial, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .card-title--1__title--main {
   font-size: 3em;
 }
 .card-title--1__title--second {
-  font-size: 1.2em;
+  font-size: 1.3rem;
 }
 .card-title--1__menu {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #3D1319;
   font-family: handlee, arial, sans-serif;
   text-transform: uppercase;
   font-weight: bold;
+  font-style: italic;
 }
 .card-title--2 {
   background: linear-gradient(150deg, #C67412 0% 35%, #6E4CCC 65% 100%);
@@ -250,7 +255,7 @@ footer a {
   font-size: 3em;
 }
 .card-title--2__menu {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   color: #C67412;
 }
@@ -259,13 +264,13 @@ footer a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: parisienne, arial, sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .card-title--3--main {
   font-size: 3em;
 }
 .card-title--3__menu {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #229DF9;
   font-family: handlee, arial, sans-serif;
   font-weight: bold;
@@ -280,7 +285,7 @@ footer a {
   font-size: 3em;
 }
 .card-title--4__menu {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: #41963C;
   font-family: handlee, arial, sans-serif;
   font-weight: bold;
@@ -448,6 +453,7 @@ footer a {
 
 .menu-title {
   white-space: nowrap;
+  font-size: 1.3rem;
 }
 
 .menu-title-line-p1 {
