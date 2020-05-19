@@ -48,8 +48,8 @@ $text-color-end-card3:#229DF9;
 
 /*Card 4*/
 $color-card4:RGB(253,253,253);
-$text-color-start-card4: #3E923A;
-$text-color-end-card4:#BEFF7F;
+$text-color-start-card4: #41963C;
+$text-color-end-card4:#B8FA7C;
 
 @font-face {
     font-family: kaushan;
@@ -344,9 +344,9 @@ $point-appear-delay:$anim-dur / $num-points;
 }
 
 /* Animation for menu title */
-$thetransition: width .5s 0s cubic-bezier(.4,.1,.6,.9);
+$thetransition: all .4s 0s cubic-bezier(.4,.1,.6,.9);
 
-/* Property of underlines */
+/* Properties of underlines */
 .line{
     background-color: $font-color-title-pages;
     align-items: center;
@@ -355,17 +355,64 @@ $thetransition: width .5s 0s cubic-bezier(.4,.1,.6,.9);
     width: 0%;
     transition: $thetransition;
 }
+.line-p2{
+    display: inline-block;
+    width: 0; 
+    height: 0; 
+    overflow: hidden;
+    border-top: .3vw solid transparent;
+    border-bottom: .3vw solid transparent;
+    border-left: 20vw solid $text-color-start-card2;
+}
 .line-p3{
     position:relative;
-    bottom:10px;
+    bottom:22px;
     display: inline-block;
     transition: $thetransition;
-    width: 100%;
+    width: 0%;
     // height: 25px;
-    border-bottom: 4px solid $text-color-start-card3;
-    border-radius:0 0 10px 0;
-}
+    &--left-start{
+        border-bottom: 4px solid $text-color-start-card3;
+        border-radius:0 0 0 10px;    
+    }
+    &--right-start{
+        border-bottom: 4px solid $text-color-start-card3;
+        border-radius:0 0 10px 0;    
+    }
+    &--left-middle{
+        border-bottom: 4px solid $text-color-middle-card3;
+        border-radius:0 0 0 10px;    
+    }
+    &--right-middle{
+        border-bottom: 4px solid $text-color-middle-card3;
+        border-radius:0 0 10px 0;    
+    }
+    &--left-end{
+        border-bottom: 4px solid $text-color-end-card3;
+        border-radius:0 0 0 10px;    
+    }
+    &--right-end{
+        border-bottom: 4px solid $text-color-end-card3;
+        border-radius:0 0 10px 0;    
+    }
 
+}
+.line-p4{
+    overflow: hidden;
+    width: 100%;
+    // display: inline-block;
+    transition: $thetransition;
+    &--left{
+        transform:scaleX(0);
+        transform-origin: left;
+    }
+    &--right{
+        transform:scaleX(0);
+        transform-origin: right;
+    }
+
+
+}
 .menu-title-line-p1{
     align-items: center;
     &:hover > .line {
@@ -374,10 +421,18 @@ $thetransition: width .5s 0s cubic-bezier(.4,.1,.6,.9);
 }
 
 .menu-title-line-p3{
-    align-items: top;
     &:hover > .line-p3 {
         width: 100%;
     }
+}
+.menu-title-line-p4{
+    align-items:flex-end;
+    &:hover > .line-p4 {
+        transform:scaleX(1);
+
+    }
+
+
 }
 
 .menu-title{

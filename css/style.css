@@ -227,14 +227,14 @@ footer a {
   font-weight: bold;
 }
 .card-title--4 {
-  background: linear-gradient(150deg, #3E923A 0% 35%, #BEFF7F 65% 100%);
+  background: linear-gradient(150deg, #41963C 0% 35%, #B8FA7C 65% 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: kaushan, arial, sans-serif;
 }
 .card-title--4__menu {
   font-size: 2.5rem;
-  color: #3E923A;
+  color: #41963C;
   font-family: handlee, arial, sans-serif;
   font-weight: bold;
 }
@@ -296,24 +296,70 @@ footer a {
   }
 }
 /* Animation for menu title */
-/* Property of underlines */
+/* Properties of underlines */
 .line {
   background-color: RGB(53, 53, 53);
   align-items: center;
   display: inline-block;
   height: 5px;
   width: 0%;
-  transition: width 0.5s 0s cubic-bezier(0.4, 0.1, 0.6, 0.9);
+  transition: all 0.4s 0s cubic-bezier(0.4, 0.1, 0.6, 0.9);
+}
+
+.line-p2 {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border-top: 0.3vw solid transparent;
+  border-bottom: 0.3vw solid transparent;
+  border-left: 20vw solid #C67412;
 }
 
 .line-p3 {
   position: relative;
-  bottom: 10px;
+  bottom: 22px;
   display: inline-block;
-  transition: width 0.5s 0s cubic-bezier(0.4, 0.1, 0.6, 0.9);
-  width: 100%;
+  transition: all 0.4s 0s cubic-bezier(0.4, 0.1, 0.6, 0.9);
+  width: 0%;
+}
+.line-p3--left-start {
+  border-bottom: 4px solid #0228DD;
+  border-radius: 0 0 0 10px;
+}
+.line-p3--right-start {
   border-bottom: 4px solid #0228DD;
   border-radius: 0 0 10px 0;
+}
+.line-p3--left-middle {
+  border-bottom: 4px solid #0670F3;
+  border-radius: 0 0 0 10px;
+}
+.line-p3--right-middle {
+  border-bottom: 4px solid #0670F3;
+  border-radius: 0 0 10px 0;
+}
+.line-p3--left-end {
+  border-bottom: 4px solid #229DF9;
+  border-radius: 0 0 0 10px;
+}
+.line-p3--right-end {
+  border-bottom: 4px solid #229DF9;
+  border-radius: 0 0 10px 0;
+}
+
+.line-p4 {
+  overflow: hidden;
+  width: 100%;
+  transition: all 0.4s 0s cubic-bezier(0.4, 0.1, 0.6, 0.9);
+}
+.line-p4--left {
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.line-p4--right {
+  transform: scaleX(0);
+  transform-origin: right;
 }
 
 .menu-title-line-p1 {
@@ -323,11 +369,15 @@ footer a {
   width: 100%;
 }
 
-.menu-title-line-p3 {
-  align-items: top;
-}
 .menu-title-line-p3:hover > .line-p3 {
   width: 100%;
+}
+
+.menu-title-line-p4 {
+  align-items: flex-end;
+}
+.menu-title-line-p4:hover > .line-p4 {
+  transform: scaleX(1);
 }
 
 .menu-title {
