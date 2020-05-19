@@ -57,12 +57,14 @@ $text-color-end-card4:#B8FA7C;
 }
 
 /* Font size for 'menu' of cards */
-$font-size-menu-cards:2.5rem;
+$font-size-menu-cards:1.5rem;
 
 
 @mixin principalTheme{
     background-color:$color-main1;
     color:$color-main-font;
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+    font-family: 'Montserrat', sans-serif;
     a{
         color:$color-main-font;
         text-decoration: none;
@@ -108,6 +110,9 @@ h1{
     }
     & div{
         margin:.5em;
+    }
+    &--inverted{
+        transform:scaleX(-1);
     }
 }
 
@@ -161,8 +166,6 @@ footer{
         font-size: 1.2rem;
         color:$color-main-font;
         text-decoration: none;
-        font-weight: bold;
-        padding:0.8em;
     }
 
 }
@@ -178,12 +181,16 @@ footer{
     font-size: 1.5rem;
     text-decoration: none;
 }
-    
+
+@mixin dishes-layout{
+    margin:auto;
+    width: 80%;
+}
 
 .menu{
     width: 80%;
     margin:auto;
-    padding:0.5em;
+    padding:.5em;
     text-align: center;
     box-shadow: 1px 1px 5px rgb(194, 194, 194);
     &--card1{
@@ -195,23 +202,45 @@ footer{
         background-color: $color-card2;
         &__entree{
             color:$text-color-start-card2;
+            &--layout{
+                @include dishes-layout;
+                color:$text-color-start-card2;
+            }
         }
         &__plat{
             color:$text-color-middle-card2;
+            &--layout{
+                @include dishes-layout;
+                color:$text-color-middle-card2;
+            }
         }
         &__dessert{
             color:$text-color-end-card2;
+            &--layout{
+                @include dishes-layout;
+                color:$text-color-end-card2;
+
+            }
         }
     }
     &--card3{
         background-color: $color-card3;
         font-family: handlee,arial,sans-serif;
+        &__entree{
+            @include dishes-layout;
+        }
+
     }
     &--card4{
         background-color: $color-card4;
         font-family: handlee,arial,sans-serif;
+        &__entree{
+            @include dishes-layout;
+        }
     }
 }
+
+$menu-main-title-size:3em;
 
 .card-title{
     text-align: center;
@@ -223,6 +252,13 @@ footer{
         &__title{
             color:$text-color-card1;
             font-family: shadowsIntoLight,arial,sans-serif;
+            font-size: $font-size-menu-cards;
+            &--main{
+                font-size: $menu-main-title-size;
+            }
+            &--second{
+                font-size:1.2em;
+            }
         }
         &__menu{
             font-size: $font-size-menu-cards;
@@ -238,6 +274,9 @@ footer{
         -webkit-text-fill-color: transparent;
         font-family: abrilFatface,arial,sans-serif;
         font-weight: normal;
+        &--main{
+            font-size: $menu-main-title-size;
+        }
         &__menu{
             font-size: $font-size-menu-cards;
             font-weight: bold;
@@ -249,6 +288,11 @@ footer{
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-family: parisienne,arial,sans-serif;
+        font-size: $font-size-menu-cards;
+        &--main{
+            font-size: $menu-main-title-size;
+        }
+
         &__menu{
             font-size: $font-size-menu-cards;
             color:$text-color-end-card3;
@@ -261,7 +305,9 @@ footer{
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-family: kaushan,arial,sans-serif;
-
+        &--main{
+            font-size: $menu-main-title-size;
+        }
         &__menu{
             font-size: $font-size-menu-cards;
             color:$text-color-start-card4;
@@ -346,61 +392,105 @@ $point-appear-delay:$anim-dur / $num-points;
 /* Animation for menu title */
 $thetransition: all .4s 0s cubic-bezier(.4,.1,.6,.9);
 
+/* For card 2 underline animation */
+$triangle-height:.3vw;
+$triangle-long-size:(
+    br:20vw,
+    bl:0
+);
+$triangle-short-size:(
+    br:0vw,
+    bl:2vw
+);
+@mixin triangle-card2 ($text-color-start-card2, $triangles-sizes-br,$triangles-sizes-bl) {
+    border-top: $triangle-height solid transparent;
+    border-bottom:$triangle-height solid transparent;
+    border-right: $triangles-sizes-br solid $text-color-start-card2;
+    border-left: $triangles-sizes-bl solid $text-color-start-card2;
+
+}
+// @mixin triangle-card2-right ($text-color-start-card2, $triangles-sizes) {
+//     border-top: .3vw solid transparent;
+//     border-bottom:.3vw solid transparent;
+//     border-left: $triangles-sizes solid $text-color-start-card2;
+// }
+@mixin triangle-line-p2-animation{
+    margin:0 !important;
+    width: 0; 
+    height: 0; 
+}
+
 /* Properties of underlines */
-.line{
+.line-p1{
     background-color: $font-color-title-pages;
     align-items: center;
     display: inline-block;
     height: 5px;
     width: 0%;
+    border-radius: 2px;
+    transition: $thetransition;
+}
+.line-p2-anim{
+    opacity: 0;
     transition: $thetransition;
 }
 .line-p2{
-    display: inline-block;
-    width: 0; 
-    height: 0; 
-    overflow: hidden;
-    border-top: .3vw solid transparent;
-    border-bottom: .3vw solid transparent;
-    border-left: 20vw solid $text-color-start-card2;
+    @include triangle-line-p2-animation;
+    &--start-long{
+        @include triangle-card2($text-color-start-card2, map-get($triangle-long-size,br),map-get($triangle-long-size,bl));
+    }
+    &--start-short{
+        @include triangle-card2($text-color-start-card2, map-get($triangle-short-size,br),map-get($triangle-short-size,bl));
+    }
+    &--middle-long{
+        @include triangle-card2($text-color-middle-card2, map-get($triangle-long-size,br),map-get($triangle-long-size,bl));
+    }
+    &--middle-short{
+        @include triangle-card2($text-color-middle-card2, map-get($triangle-short-size,br),map-get($triangle-short-size,bl));
+    }
+    &--end-long{
+        @include triangle-card2($text-color-end-card2, map-get($triangle-long-size,br),map-get($triangle-long-size,bl));
+    }
+    &--end-short{
+        @include triangle-card2($text-color-end-card2, map-get($triangle-short-size,br),map-get($triangle-short-size,bl));
+    }
+
 }
+
+
 .line-p3{
     position:relative;
     bottom:22px;
     display: inline-block;
     transition: $thetransition;
     width: 0%;
-    // height: 25px;
-    &--left-start{
+    &--start{
         border-bottom: 4px solid $text-color-start-card3;
-        border-radius:0 0 0 10px;    
+        border-radius:0 0 0 10px; 
+        &--inverted{
+            transform:scaleX(-1);
+        }   
     }
-    &--right-start{
-        border-bottom: 4px solid $text-color-start-card3;
-        border-radius:0 0 10px 0;    
-    }
-    &--left-middle{
+    &--middle{
         border-bottom: 4px solid $text-color-middle-card3;
-        border-radius:0 0 0 10px;    
+        border-radius:0 0 0 10px; 
+        &--inverted{
+            transform:scaleX(-1);
+        }   
     }
-    &--right-middle{
-        border-bottom: 4px solid $text-color-middle-card3;
-        border-radius:0 0 10px 0;    
-    }
-    &--left-end{
+    &--end{
         border-bottom: 4px solid $text-color-end-card3;
-        border-radius:0 0 0 10px;    
-    }
-    &--right-end{
-        border-bottom: 4px solid $text-color-end-card3;
-        border-radius:0 0 10px 0;    
+        border-radius:0 0 0 10px; 
+        &--inverted{
+            transform:scaleX(-1);
+        }   
     }
 
 }
 .line-p4{
     overflow: hidden;
     width: 100%;
-    // display: inline-block;
+    display: inline-block;
     transition: $thetransition;
     &--left{
         transform:scaleX(0);
@@ -410,36 +500,34 @@ $thetransition: all .4s 0s cubic-bezier(.4,.1,.6,.9);
         transform:scaleX(0);
         transform-origin: right;
     }
-
-
+}
+.menu-title{
+    white-space: nowrap;
 }
 .menu-title-line-p1{
     align-items: center;
-    &:hover > .line {
+    &:hover > .line-p1 {
         width: 100%;
     }
 }
-
+.menu-title-line-p2{
+    align-items: center;
+    &:hover > .line-p2-anim {
+        opacity: 1;
+    }
+}
 .menu-title-line-p3{
     &:hover > .line-p3 {
         width: 100%;
     }
 }
 .menu-title-line-p4{
-    align-items:flex-end;
+    align-items:center;
     &:hover > .line-p4 {
         transform:scaleX(1);
 
     }
-
-
 }
-
-.menu-title{
-    white-space: nowrap;
-}
-
-
 
 
 /* Media queries */
@@ -451,8 +539,4 @@ $thetransition: all .4s 0s cubic-bezier(.4,.1,.6,.9);
         margin:auto;
         margin-bottom: 20px;
     }
-    button{
-        width: 80%;
-    }
-    
 }
