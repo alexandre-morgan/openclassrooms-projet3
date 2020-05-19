@@ -15,8 +15,8 @@ $icon-color-end-card1:#F6916A;
 }
 /*Title of card 1 font*/
 @font-face {
-    font-family: shadowsIntoLight;
-    src: url(../fonts/ShadowsIntoLight-Regular.ttf);
+    font-family: courgette;
+    src: url(../fonts/Courgette-Regular.ttf);
 }
 
 /*Card 2*/
@@ -56,6 +56,13 @@ $text-color-end-card4:#B8FA7C;
     src: url(../fonts/KaushanScript-Regular.ttf);
 }
 
+/* Principal theme font */
+@font-face {
+    font-family: montserrat;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+
 /* Font size for 'menu' of cards */
 $font-size-menu-cards:1.3rem;
 
@@ -63,9 +70,8 @@ $font-size-menu-cards:1.3rem;
 @mixin principalTheme{
     background-color:$color-main1;
     color:$color-main-font;
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
-    font-family: 'Montserrat', sans-serif;
-    a{
+    font-family: montserrat,Arial, sans-serif;
+        a{
         color:$color-main-font;
         text-decoration: none;
     }
@@ -96,7 +102,7 @@ h1{
     display:flex;
     flex-wrap: nowrap;
     justify-content: center;
-    align-items: top;
+    align-items: center;
     text-align: left;
     margin:20px;
     &--display-spaceB{
@@ -173,7 +179,7 @@ footer{
 .btn{
     @include principalTheme;
     display: inline-block;
-    width: 60%;
+    width: 55%;
     white-space: nowrap;
     text-align: center;
     padding:10px;
@@ -256,7 +262,7 @@ $menu-main-title-size:3em;
         -webkit-text-fill-color: transparent;
         &__title{
             color:$text-color-card1;
-            font-family: shadowsIntoLight,arial,sans-serif;
+            font-family: courgette,arial,sans-serif;
             font-size: $font-size-menu-cards;
             &--main{
                 font-size: $menu-main-title-size;

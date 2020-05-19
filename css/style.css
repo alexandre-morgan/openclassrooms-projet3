@@ -6,8 +6,8 @@
 }
 /*Title of card 1 font*/
 @font-face {
-  font-family: shadowsIntoLight;
-  src: url(../fonts/ShadowsIntoLight-Regular.ttf);
+  font-family: courgette;
+  src: url(../fonts/Courgette-Regular.ttf);
 }
 /*Card 2*/
 /*Title of card 1 font*/
@@ -29,6 +29,11 @@
   font-family: kaushan;
   src: url(../fonts/KaushanScript-Regular.ttf);
 }
+/* Principal theme font */
+@font-face {
+  font-family: montserrat;
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
 /* Font size for 'menu' of cards */
 body {
   margin: 0;
@@ -43,8 +48,7 @@ header {
   text-align: center;
   background-color: #579C87;
   color: RGB(253, 203, 70);
-  @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap");
-  font-family: "Montserrat", sans-serif;
+  font-family: montserrat, Arial, sans-serif;
 }
 header a {
   color: RGB(253, 203, 70);
@@ -60,7 +64,7 @@ h1 {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
-  align-items: top;
+  align-items: center;
   text-align: left;
   margin: 20px;
 }
@@ -116,8 +120,7 @@ h1 {
 footer {
   background-color: #579C87;
   color: RGB(253, 203, 70);
-  @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap");
-  font-family: "Montserrat", sans-serif;
+  font-family: montserrat, Arial, sans-serif;
   height: auto;
   position: sticky;
   bottom: 0;
@@ -140,10 +143,9 @@ footer a {
 .btn {
   background-color: #579C87;
   color: RGB(253, 203, 70);
-  @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap");
-  font-family: "Montserrat", sans-serif;
+  font-family: montserrat, Arial, sans-serif;
   display: inline-block;
-  width: 60%;
+  width: 55%;
   white-space: nowrap;
   text-align: center;
   padding: 10px;
@@ -227,7 +229,7 @@ footer a {
 }
 .card-title--1__title {
   color: #3D1319;
-  font-family: shadowsIntoLight, arial, sans-serif;
+  font-family: courgette, arial, sans-serif;
   font-size: 1.3rem;
 }
 .card-title--1__title--main {
