@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "sass --watch css/style.scss:./style.css",
-    "prefix": "postcss css/style.css --use autoprefixer -d css/prefixed/"
+    "prefix": "postcss css/style.css --use autoprefixer -d css/prefixed"
   },
   "repository": {
     "type": "git",
