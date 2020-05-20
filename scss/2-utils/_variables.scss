@@ -1,0 +1,60 @@
+/* Principal theme header / button / footer */
+$color-main1:#579C87;
+$color-main-font:RGB(253,203,70);
+$font-color-title-pages:RGB(53,53,53);
+
+/*Card 1*/
+$color-card1:RGB(252,223,219);
+$text-color-card1:#3D1319;
+$icon-color-start-card1:#EF465F;
+$icon-color-end-card1:#F6916A;
+
+/*Card 2*/
+$color-card2:RGB(255,245,254);
+$text-color-start-card2:#C67412;
+$text-color-middle-card2:#A56799;
+$text-color-end-card2:#6E4CCC;
+
+/*Card 3*/
+$color-card3:RGB(237,239,239);
+$text-color-start-card3:#0228DD;
+$text-color-middle-card3:#0670F3;
+$text-color-end-card3:#229DF9;
+
+/*Card 4*/
+$color-card4:RGB(253,253,253);
+$text-color-start-card4: #41963C;
+$text-color-end-card4:#B8FA7C;
+
+/* Font size for 'menu' of cards (index.html)*/
+$font-size-menu-cards:1.3rem;
+
+/* Font size of the main title of all menu (other pages) */
+$menu-main-title-size:3em;
+
+/* Intensity for the wiggle animation */
+$wiggle-intensity:1%;
+
+/* Points appearing animation for 'Prochainement' button */
+$anim-dur:1000ms;
+$num-points:3;
+$point-appear-delay:$anim-dur / $num-points;
+
+
+/* General data for all menu titles animations*/
+$thetransition: all .4s 0s cubic-bezier(.4,.1,.6,.9);
+
+/* For card 2 title underline animation */
+
+    /* Size for height of triangles */
+    $triangle-height:.3vw;
+    /* Width of long triangle */
+    $triangle-long-size:(
+        br:20vw,
+        bl:0
+    );
+    /* width of short triangle */
+    $triangle-short-size:(
+        br:0vw,
+        bl:2vw
+    );

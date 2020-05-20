@@ -1,0 +1,26 @@
+/* Properties of the title of the dishes */
+.menu-title{
+    white-space: nowrap;
+    font-size:$font-size-menu-cards;
+}
+
+
+
+/* Properties of the underline */
+.line-p1{
+    background-color: $font-color-title-pages;
+    align-items: center;
+    display: inline-block;
+    height: 5px;
+    width: 0%;
+    border-radius: 2px;
+    transition: $thetransition;
+}
+
+/* For the animation */
+.menu-title-line-p1{
+    align-items: center;
+    &:hover > .line-p1 {
+        width: 100%;
+    }
+}

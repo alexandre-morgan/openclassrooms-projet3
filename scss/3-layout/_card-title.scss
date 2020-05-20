@@ -1,0 +1,86 @@
+.card-title{
+    text-align: center;
+    color:$font-color-title-pages;
+    font-family: 'Montserrat', sans-serif;
+    
+    /* For card 1 */
+    &--1{
+        /* gradient color for the icon */
+        background: linear-gradient(135deg, $icon-color-start-card1 0% 35%, $icon-color-end-card1 65% 100% );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        /* Properties for the title of the card and menu */
+        &__title{
+            color:$text-color-card1;
+            font-family: courgette,arial,sans-serif;
+            font-size: $font-size-menu-cards;
+            /* Properties for the main title of the menu */
+            &--main{
+                font-size: $menu-main-title-size;
+            }
+            /* Properties for the second title of the menu (only in card 1)*/
+            &--second{
+                font-size:$font-size-menu-cards;
+            }
+        }
+        /* Properties for the 'menu' word in the card1 (index.html)*/
+        &__menu{
+            font-size: $font-size-menu-cards;
+            color:$text-color-card1;
+            font-family: handlee,arial,sans-serif;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-style: italic;
+        }
+    }
+    &--2{
+        background: linear-gradient(150deg, $text-color-start-card2 0% 35%, $text-color-end-card2 65% 100% );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: abrilFatface,arial,sans-serif;
+        font-weight: normal;
+        &--main{
+            font-size: $menu-main-title-size;
+        }
+        &__menu{
+            font-size: $font-size-menu-cards;
+            font-weight: bold;
+            color:$text-color-start-card2;
+        }
+    }
+    &--3{
+        background: linear-gradient(150deg, $text-color-start-card3 0% 35%, $text-color-end-card3 65% 100% );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: parisienne,arial,sans-serif;
+        font-size: $font-size-menu-cards;
+        &--main{
+            font-size: $menu-main-title-size;
+        }
+
+        &__menu{
+            font-size: $font-size-menu-cards;
+            color:$text-color-end-card3;
+            font-family: handlee,arial,sans-serif;
+            font-weight: bold;
+        }
+    }
+    &--4{
+        background: linear-gradient(150deg, $text-color-start-card4 0% 35%, $text-color-end-card4 65% 100% );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: kaushan,arial,sans-serif;
+        &--main{
+            font-size: $menu-main-title-size;
+        }
+        &__menu{
+            font-size: $font-size-menu-cards;
+            color:$text-color-start-card4;
+            font-family: handlee,arial,sans-serif;
+            font-weight: bold;
+        }
+
+    }
+
+    
+}

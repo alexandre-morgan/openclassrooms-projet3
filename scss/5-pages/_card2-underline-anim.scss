@@ -1,0 +1,37 @@
+/* Properties of the underline */
+.line-p2-anim{
+    opacity: 0;
+    transition: $thetransition;
+}
+
+.line-p2{
+    @include triangle-line-p2-animation;
+    &--start-long{
+        @include triangle-card2($text-color-start-card2, map-get($triangle-long-size,br),map-get($triangle-long-size,bl));
+    }
+    &--start-short{
+        @include triangle-card2($text-color-start-card2, map-get($triangle-short-size,br),map-get($triangle-short-size,bl));
+    }
+    &--middle-long{
+        @include triangle-card2($text-color-middle-card2, map-get($triangle-long-size,br),map-get($triangle-long-size,bl));
+    }
+    &--middle-short{
+        @include triangle-card2($text-color-middle-card2, map-get($triangle-short-size,br),map-get($triangle-short-size,bl));
+    }
+    &--end-long{
+        @include triangle-card2($text-color-end-card2, map-get($triangle-long-size,br),map-get($triangle-long-size,bl));
+    }
+    &--end-short{
+        @include triangle-card2($text-color-end-card2, map-get($triangle-short-size,br),map-get($triangle-short-size,bl));
+    }
+
+}
+
+
+/* For the animation */
+.menu-title-line-p2{
+    align-items: center;
+    &:hover > .line-p2-anim {
+        opacity: 1;
+    }
+}

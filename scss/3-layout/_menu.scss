@@ -1,0 +1,58 @@
+/* BEM blocks for all the menu of all cards */
+.menu{
+    width: 80%;
+    margin:auto;
+    padding:.5em;
+    text-align: center;
+    box-shadow: 1px 1px 5px rgb(194, 194, 194);
+    &--card1{
+        color:$text-color-card1;
+        background-color: $color-card1;
+        font-family: handlee,arial,sans-serif;
+        font-weight: bold;
+    }
+    &--card2{
+        background-color: $color-card2;
+        /* For the title of the entrée part */
+        &__entree{
+            color:$text-color-start-card2;
+            /* For the layout of the entrée dishes */
+            &--layout{
+                @include dishes-layout;
+                color:$text-color-start-card2;
+            }
+        }
+        &__plat{
+            color:$text-color-middle-card2;
+            &--layout{
+                @include dishes-layout;
+                color:$text-color-middle-card2;
+            }
+        }
+        &__dessert{
+            color:$text-color-end-card2;
+            &--layout{
+                @include dishes-layout;
+                color:$text-color-end-card2;
+
+            }
+        }
+    }
+    &--card3{
+        background-color: $color-card3;
+        font-weight: bold;
+        font-family: handlee,arial,sans-serif;
+        &__entree{
+            @include dishes-layout;
+        }
+
+    }
+    &--card4{
+        background-color: $color-card4;
+        font-family: handlee,arial,sans-serif;
+        font-weight: bold;
+        &__entree{
+            @include dishes-layout;
+        }
+    }
+}

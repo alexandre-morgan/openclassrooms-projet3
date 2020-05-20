@@ -1,0 +1,24 @@
+/* div for layout, display flex */
+.container{
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin:20px;
+    &--display-spaceB{
+        justify-content: space-between;
+    }
+    &--align-center{
+        align-items: center;
+    }
+    &--display-normal{
+        justify-content: start;
+    }
+    & div{
+        margin:.5em;
+    }
+    &--inverted{
+        transform:scaleX(-1);
+    }
+}

@@ -1,0 +1,56 @@
+/* Only in index.html*/
+
+#cards{
+    margin:auto;
+    & a{
+        text-decoration: none;
+        color:black;
+    }
+    /* Media query for responsive display of cards */
+    & .container{
+    /* Small and smaller */
+    @media (max-width: 575.98px) {
+        flex-direction: column;
+        margin:auto;
+        margin-bottom: 20px;
+        }
+    }
+}
+
+.card{
+    margin:15px;
+    box-shadow: 1px 1px 5px rgb(194, 194, 194);
+    height: 350px;
+    width:250px;
+    text-align: center;
+
+    &--card1{
+        background-color: $color-card1;
+    }
+    &--card2{
+        background-color: $color-card2;
+    }
+    &--card3{
+        background-color: $color-card3;
+    }
+    &--card4{
+        background-color: $color-card4;
+    }
+    /* For animation*/
+    overflow: hidden;
+    &:hover .card-contenu {
+        animation:zoom-card forwards 0.3s ;
+    }
+}
+
+/* Animation for cards */
+@keyframes zoom-card {
+    from {
+        transform:scale(1);
+        opacity: 1;
+    }
+    to {
+        transform:scale(1.1);
+        opacity:0.6;
+    }
+}

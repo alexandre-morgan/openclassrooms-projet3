@@ -1,0 +1,24 @@
+/* Properties of the underline */
+.line-p4{
+    overflow: hidden;
+    width: 100%;
+    display: inline-block;
+    transition: $thetransition;
+    &--left{
+        transform:scaleX(0);
+        transform-origin: left;
+    }
+    &--right{
+        transform:scaleX(0);
+        transform-origin: right;
+    }
+}
+
+/* For the animation */
+.menu-title-line-p4{
+    align-items:center;
+    &:hover > .line-p4 {
+        transform:scaleX(1);
+
+    }
+}

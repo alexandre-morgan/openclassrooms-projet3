@@ -1,0 +1,38 @@
+/* Properties of the button */
+.btn{
+    @include principalTheme;
+    display: inline-block;
+    width: 55%;
+    white-space: nowrap;
+    text-align: center;
+    padding:10px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    text-decoration: none;
+
+    /* Discussion points animation when btn prochainement hover */
+    &:hover .point  {
+        animation: points-appearing $anim-dur backwards infinite alternate;
+        @for $i from 1 through $num-points {
+            &--#{$i} {
+                animation-delay:$point-appear-delay * ($i - 1);
+            }
+        }
+    }
+}
+
+/* Properties of the points */
+.point{
+    height:100px;
+    opacity:0;
+    }
+
+/* Animation for 'Prochainement button' with points */
+@keyframes points-appearing {
+    0% {
+        opacity: 0;
+      }
+    100% {
+        opacity: 1;
+      }
+}

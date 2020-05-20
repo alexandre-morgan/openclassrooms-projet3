@@ -1,4 +1,23 @@
+@charset "UTF-8";
+/* Principal theme header / button / footer */
 /*Card 1*/
+/*Card 2*/
+/*Card 3*/
+/*Card 4*/
+/* Font size for 'menu' of cards (index.html)*/
+/* Font size of the main title of all menu (other pages) */
+/* Intensity for the wiggle animation */
+/* Points appearing animation for 'Prochainement' button */
+/* General data for all menu titles animations*/
+/* For card 2 title underline animation */
+/* Size for height of triangles */
+/* Width of long triangle */
+/* width of short triangle */
+/* Principal theme font */
+@font-face {
+  font-family: montserrat;
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
 /* Menu font */
 @font-face {
   font-family: handlee;
@@ -9,32 +28,25 @@
   font-family: courgette;
   src: url(../fonts/Courgette-Regular.ttf);
 }
-/*Card 2*/
-/*Title of card 1 font*/
+/*Title of card 2 font*/
 @font-face {
   font-family: abrilFatface;
   src: url(../fonts/AbrilFatface-Regular.ttf);
 }
-/*Card 3*/
+/*Title of card 3 font*/
 @font-face {
   font-family: parisienne;
   src: url(../fonts/Parisienne-Regular.ttf);
 }
-@font-face {
-  font-family: caveat;
-  src: url(../fonts/Caveat-Regular.ttf);
-}
-/*Card 4*/
+/*Title of card 4 font*/
 @font-face {
   font-family: kaushan;
   src: url(../fonts/KaushanScript-Regular.ttf);
 }
-/* Principal theme font */
-@font-face {
-  font-family: montserrat;
-  src: url(../fonts/Montserrat-Regular.ttf);
-}
-/* Font size for 'menu' of cards */
+/* Theme for header and footer */
+/* Properties of the layout of the dishes */
+/* General properties for triangles for underline animation of card 2 */
+/* Other properties of triangles */
 body {
   margin: 0;
 }
@@ -44,22 +56,7 @@ body {
   max-width: 960px;
 }
 
-header {
-  text-align: center;
-  background-color: #579C87;
-  color: RGB(253, 203, 70);
-  font-family: montserrat, Arial, sans-serif;
-}
-header a {
-  color: RGB(253, 203, 70);
-  text-decoration: none;
-}
-
-h1 {
-  margin-top: 0;
-  padding: 0.5em;
-}
-
+/* div for layout, display flex */
 .container {
   display: flex;
   flex-wrap: nowrap;
@@ -84,37 +81,20 @@ h1 {
   transform: scaleX(-1);
 }
 
-#cards {
-  margin: auto;
-}
-#cards a {
-  text-decoration: none;
-  color: black;
+h1 {
+  margin-top: 0;
+  padding: 0.5em;
 }
 
-.card {
-  margin: 15px;
-  box-shadow: 1px 1px 5px #c2c2c2;
-  height: 350px;
-  width: 250px;
+header {
   text-align: center;
-  /* For animation*/
-  overflow: hidden;
+  background-color: #579C87;
+  color: RGB(253, 203, 70);
+  font-family: montserrat, Arial, sans-serif;
 }
-.card--card1 {
-  background-color: RGB(252, 223, 219);
-}
-.card--card2 {
-  background-color: RGB(255, 245, 254);
-}
-.card--card3 {
-  background-color: RGB(237, 239, 239);
-}
-.card--card4 {
-  background-color: RGB(253, 253, 253);
-}
-.card:hover .card-contenu {
-  animation: zoom-card forwards 0.3s;
+header a {
+  color: RGB(253, 203, 70);
+  text-decoration: none;
 }
 
 footer {
@@ -140,24 +120,7 @@ footer a {
   text-decoration: none;
 }
 
-.btn {
-  background-color: #579C87;
-  color: RGB(253, 203, 70);
-  font-family: montserrat, Arial, sans-serif;
-  display: inline-block;
-  width: 55%;
-  white-space: nowrap;
-  text-align: center;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 1.5rem;
-  text-decoration: none;
-}
-.btn a {
-  color: RGB(253, 203, 70);
-  text-decoration: none;
-}
-
+/* BEM blocks for all the menu of all cards */
 .menu {
   width: 80%;
   margin: auto;
@@ -173,9 +136,11 @@ footer a {
 }
 .menu--card2 {
   background-color: RGB(255, 245, 254);
+  /* For the title of the entrée part */
 }
 .menu--card2__entree {
   color: #C67412;
+  /* For the layout of the entrée dishes */
 }
 .menu--card2__entree--layout {
   margin: auto;
@@ -221,16 +186,22 @@ footer a {
   text-align: center;
   color: RGB(53, 53, 53);
   font-family: "Montserrat", sans-serif;
+  /* For card 1 */
 }
 .card-title--1 {
+  /* gradient color for the icon */
   background: linear-gradient(135deg, #EF465F 0% 35%, #F6916A 65% 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  /* Properties for the title of the card and menu */
+  /* Properties for the 'menu' word in the card1 (index.html)*/
 }
 .card-title--1__title {
   color: #3D1319;
   font-family: courgette, arial, sans-serif;
   font-size: 1.3rem;
+  /* Properties for the main title of the menu */
+  /* Properties for the second title of the menu (only in card 1)*/
 }
 .card-title--1__title--main {
   font-size: 3em;
@@ -293,24 +264,25 @@ footer a {
   font-weight: bold;
 }
 
-.price {
-  font-weight: bold;
+/* Properties of the button */
+.btn {
+  background-color: #579C87;
+  color: RGB(253, 203, 70);
+  font-family: montserrat, Arial, sans-serif;
+  display: inline-block;
+  width: 55%;
+  white-space: nowrap;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  /* Discussion points animation when btn prochainement hover */
 }
-
-/* Wiggle animation for footer's buttons */
-.wiggle:hover {
-  animation: wiggle 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 3;
+.btn a {
+  color: RGB(253, 203, 70);
+  text-decoration: none;
 }
-
-@keyframes wiggle {
-  25% {
-    transform: translateX(1%);
-  }
-  75% {
-    transform: translateX(-1%);
-  }
-}
-/* Points appearing animation for 'Prochainement' button */
 .btn:hover .point {
   animation: points-appearing 1000ms backwards infinite alternate;
 }
@@ -324,6 +296,7 @@ footer a {
   animation-delay: 666.6666666667ms;
 }
 
+/* Properties of the points */
 .point {
   height: 100px;
   opacity: 0;
@@ -338,6 +311,69 @@ footer a {
     opacity: 1;
   }
 }
+/* Wiggle animation for footer's buttons */
+.wiggle:hover {
+  animation: wiggle 100ms cubic-bezier(0.4, 0.1, 0.6, 0.9) 3;
+}
+
+@keyframes wiggle {
+  25% {
+    transform: translateX(1%);
+  }
+  75% {
+    transform: translateX(-1%);
+  }
+}
+/* Properties for all prices of menus */
+.price {
+  font-weight: bold;
+}
+
+/* Only in index.html*/
+#cards {
+  margin: auto;
+  /* Media query for responsive display of cards */
+}
+#cards a {
+  text-decoration: none;
+  color: black;
+}
+#cards .container {
+  /* Small and smaller */
+}
+@media (max-width: 575.98px) {
+  #cards .container {
+    flex-direction: column;
+    margin: auto;
+    margin-bottom: 20px;
+  }
+}
+
+.card {
+  margin: 15px;
+  box-shadow: 1px 1px 5px #c2c2c2;
+  height: 350px;
+  width: 250px;
+  text-align: center;
+  /* For animation*/
+  overflow: hidden;
+}
+.card--card1 {
+  background-color: RGB(252, 223, 219);
+}
+.card--card2 {
+  background-color: RGB(255, 245, 254);
+}
+.card--card3 {
+  background-color: RGB(237, 239, 239);
+}
+.card--card4 {
+  background-color: RGB(253, 253, 253);
+}
+.card:hover .card-contenu {
+  animation: zoom-card forwards 0.3s;
+}
+
 /* Animation for cards */
 @keyframes zoom-card {
   from {
@@ -349,9 +385,13 @@ footer a {
     opacity: 0.6;
   }
 }
-/* Animation for menu title */
-/* For card 2 underline animation */
-/* Properties of underlines */
+/* Properties of the title of the dishes */
+.menu-title {
+  white-space: nowrap;
+  font-size: 1.3rem;
+}
+
+/* Properties of the underline */
 .line-p1 {
   background-color: RGB(53, 53, 53);
   align-items: center;
@@ -362,6 +402,15 @@ footer a {
   transition: all 0.4s 0s cubic-bezier(0.4, 0.1, 0.6, 0.9);
 }
 
+/* For the animation */
+.menu-title-line-p1 {
+  align-items: center;
+}
+.menu-title-line-p1:hover > .line-p1 {
+  width: 100%;
+}
+
+/* Properties of the underline */
 .line-p2-anim {
   opacity: 0;
   transition: all 0.4s 0s cubic-bezier(0.4, 0.1, 0.6, 0.9);
@@ -409,12 +458,22 @@ footer a {
   border-left: 2vw solid #6E4CCC;
 }
 
+/* For the animation */
+.menu-title-line-p2 {
+  align-items: center;
+}
+.menu-title-line-p2:hover > .line-p2-anim {
+  opacity: 1;
+}
+
+/* Properties of the underline */
 .line-p3 {
   position: relative;
-  bottom: 22px;
+  bottom: 5px;
   display: inline-block;
   transition: all 0.4s 0s cubic-bezier(0.4, 0.1, 0.6, 0.9);
   width: 0%;
+  height: 10px;
 }
 .line-p3--start {
   border-bottom: 4px solid #0228DD;
@@ -438,6 +497,12 @@ footer a {
   transform: scaleX(-1);
 }
 
+/* For the animation */
+.menu-title-line-p3:hover > .line-p3 {
+  width: 100%;
+}
+
+/* Properties of the underline */
 .line-p4 {
   overflow: hidden;
   width: 100%;
@@ -453,44 +518,12 @@ footer a {
   transform-origin: right;
 }
 
-.menu-title {
-  white-space: nowrap;
-  font-size: 1.3rem;
-}
-
-.menu-title-line-p1 {
-  align-items: center;
-}
-.menu-title-line-p1:hover > .line-p1 {
-  width: 100%;
-}
-
-.menu-title-line-p2 {
-  align-items: center;
-}
-.menu-title-line-p2:hover > .line-p2-anim {
-  opacity: 1;
-}
-
-.menu-title-line-p3:hover > .line-p3 {
-  width: 100%;
-}
-
+/* For the animation */
 .menu-title-line-p4 {
   align-items: center;
 }
 .menu-title-line-p4:hover > .line-p4 {
   transform: scaleX(1);
-}
-
-/* Media queries */
-/* Small and smaller */
-@media (max-width: 575.98px) {
-  #cards .container {
-    flex-direction: column;
-    margin: auto;
-    margin-bottom: 20px;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

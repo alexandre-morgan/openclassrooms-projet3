@@ -1,0 +1,31 @@
+/* Theme for header and footer */
+@mixin principalTheme{
+    background-color:$color-main1;
+    color:$color-main-font;
+    font-family: montserrat,Arial, sans-serif;
+        a{
+        color:$color-main-font;
+        text-decoration: none;
+    }
+}
+
+/* Properties of the layout of the dishes */
+@mixin dishes-layout{
+    margin:auto;
+    width: 80%;
+}
+
+/* General properties for triangles for underline animation of card 2 */
+@mixin triangle-card2 ($text-color-start-card2, $triangles-sizes-br,$triangles-sizes-bl) {
+    border-top: $triangle-height solid transparent;
+    border-bottom:$triangle-height solid transparent;
+    border-right: $triangles-sizes-br solid $text-color-start-card2;
+    border-left: $triangles-sizes-bl solid $text-color-start-card2;
+
+}
+    /* Other properties of triangles */
+    @mixin triangle-line-p2-animation{
+        margin:0 !important;
+        width: 0; 
+        height: 0; 
+    }

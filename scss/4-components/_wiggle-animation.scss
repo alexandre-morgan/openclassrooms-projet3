@@ -1,0 +1,17 @@
+/* Wiggle animation for footer's buttons */
+.wiggle{
+    &:hover{
+        animation: wiggle 100ms cubic-bezier(.4,.1,.6,.9) 3;
+    }
+}
+
+@keyframes wiggle {
+    25% {
+        // totally right
+        transform: translateX($wiggle-intensity);
+    }
+    75% {
+        // totally laft
+        transform: translateX($wiggle-intensity * -1);
+    }
+} 

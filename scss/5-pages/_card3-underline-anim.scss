@@ -1,0 +1,37 @@
+/* Properties of the underline */
+.line-p3{
+    position:relative;
+    bottom:5px;
+    display: inline-block;
+    transition: $thetransition;
+    width: 0%;
+    height:10px;
+    &--start{
+        border-bottom: 4px solid $text-color-start-card3;
+        border-radius:0 0 0 10px; 
+        &--inverted{
+            transform:scaleX(-1);
+        }   
+    }
+    &--middle{
+        border-bottom: 4px solid $text-color-middle-card3;
+        border-radius:0 0 0 10px; 
+        &--inverted{
+            transform:scaleX(-1);
+        }   
+    }
+    &--end{
+        border-bottom: 4px solid $text-color-end-card3;
+        border-radius:0 0 0 10px; 
+        &--inverted{
+            transform:scaleX(-1);
+        }   
+    }
+}
+
+/* For the animation */
+.menu-title-line-p3{
+    &:hover > .line-p3 {
+        width: 100%;
+    }
+}
