@@ -414,6 +414,7 @@ footer a {
 .line-p2-anim {
   opacity: 0;
   transition: all 0.4s 0s cubic-bezier(0.4, 0.1, 0.6, 0.9);
+  width: 100%;
 }
 
 .line-p2 {
@@ -422,40 +423,45 @@ footer a {
   height: 0;
 }
 .line-p2--start-long {
-  border-top: 0.3vw solid transparent;
-  border-bottom: 0.3vw solid transparent;
-  border-right: 20vw solid #C67412;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 15em solid #C67412;
   border-left: 0 solid #C67412;
 }
 .line-p2--start-short {
-  border-top: 0.3vw solid transparent;
-  border-bottom: 0.3vw solid transparent;
-  border-right: 0vw solid #C67412;
-  border-left: 2vw solid #C67412;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 0 solid #C67412;
+  border-left: 2em solid #C67412;
 }
 .line-p2--middle-long {
-  border-top: 0.3vw solid transparent;
-  border-bottom: 0.3vw solid transparent;
-  border-right: 20vw solid #A56799;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 15em solid #A56799;
   border-left: 0 solid #A56799;
 }
 .line-p2--middle-short {
-  border-top: 0.3vw solid transparent;
-  border-bottom: 0.3vw solid transparent;
-  border-right: 0vw solid #A56799;
-  border-left: 2vw solid #A56799;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 0 solid #A56799;
+  border-left: 2em solid #A56799;
 }
 .line-p2--end-long {
-  border-top: 0.3vw solid transparent;
-  border-bottom: 0.3vw solid transparent;
-  border-right: 20vw solid #6E4CCC;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 15em solid #6E4CCC;
   border-left: 0 solid #6E4CCC;
 }
 .line-p2--end-short {
-  border-top: 0.3vw solid transparent;
-  border-bottom: 0.3vw solid transparent;
-  border-right: 0vw solid #6E4CCC;
-  border-left: 2vw solid #6E4CCC;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-right: 0 solid #6E4CCC;
+  border-left: 2em solid #6E4CCC;
+}
+@media (max-width: 960px) {
+  .line-p2 {
+    display: none;
+  }
 }
 
 /* For the animation */

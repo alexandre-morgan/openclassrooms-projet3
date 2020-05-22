@@ -2,6 +2,7 @@
 .line-p2-anim{
     opacity: 0;
     transition: $thetransition;
+    width: 100%;
 }
 
 .line-p2{
@@ -24,7 +25,9 @@
     &--end-short{
         @include triangle-card2($text-color-end-card2, map-get($triangle-short-size,br),map-get($triangle-short-size,bl));
     }
-
+    @media (max-width:960px){
+        display: none;
+    }
 }
 
 

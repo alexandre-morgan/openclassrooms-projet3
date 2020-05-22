@@ -47,14 +47,16 @@ $thetransition: all .4s 0s cubic-bezier(.4,.1,.6,.9);
 /* For card 2 title underline animation */
 
     /* Size for height of triangles */
-    $triangle-height:.3vw;
+    $triangle-height:5px;
     /* Width of long triangle */
     $triangle-long-size:(
-        br:20vw,
-        bl:0
+        br:15em,
+        bl:0,
+        br-middle-screen:9em
     );
     /* width of short triangle */
     $triangle-short-size:(
-        br:0vw,
-        bl:2vw
+        br:0,
+        bl:2em
     );
+ 
