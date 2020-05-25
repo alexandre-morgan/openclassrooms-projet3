@@ -147,6 +147,11 @@ footer a {
   width: 80%;
   color: #C67412;
 }
+@media (max-width: 960px) {
+  .menu--card2__entree--layout {
+    width: 100%;
+  }
+}
 .menu--card2__plat {
   color: #A56799;
 }
@@ -155,6 +160,11 @@ footer a {
   width: 80%;
   color: #A56799;
 }
+@media (max-width: 960px) {
+  .menu--card2__plat--layout {
+    width: 100%;
+  }
+}
 .menu--card2__dessert {
   color: #6E4CCC;
 }
@@ -162,6 +172,11 @@ footer a {
   margin: auto;
   width: 80%;
   color: #6E4CCC;
+}
+@media (max-width: 960px) {
+  .menu--card2__dessert--layout {
+    width: 100%;
+  }
 }
 .menu--card3 {
   background-color: RGB(237, 239, 239);
@@ -172,6 +187,11 @@ footer a {
   margin: auto;
   width: 80%;
 }
+@media (max-width: 960px) {
+  .menu--card3__entree {
+    width: 100%;
+  }
+}
 .menu--card4 {
   background-color: RGB(253, 253, 253);
   font-family: handlee, arial, sans-serif;
@@ -180,6 +200,11 @@ footer a {
 .menu--card4__entree {
   margin: auto;
   width: 80%;
+}
+@media (max-width: 960px) {
+  .menu--card4__entree {
+    width: 100%;
+  }
 }
 
 .card-title {

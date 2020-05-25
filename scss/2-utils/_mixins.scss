@@ -13,6 +13,9 @@
 @mixin dishes-layout{
     margin:auto;
     width: 80%;
+    @media (max-width:960px){
+        width: 100%;
+    }
 }
 
 /* General properties for triangles for underline animation of card 2 */
