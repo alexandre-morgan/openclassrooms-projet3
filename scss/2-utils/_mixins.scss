@@ -2,7 +2,7 @@
 @mixin principalTheme{
     background-color:$color-main1;
     color:$color-main-font;
-    font-family: montserrat,Arial, sans-serif;
+    font-family: $font-principal-theme,Arial, sans-serif;
         a{
         color:$color-main-font;
         text-decoration: none;

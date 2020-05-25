@@ -1,7 +1,7 @@
 .card-title{
     text-align: center;
     color:$font-color-title-pages;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $font-principal-theme, sans-serif;
     
     /* For card 1 */
     &--1{
@@ -12,7 +12,7 @@
         /* Properties for the title of the card and menu */
         &__title{
             color:$text-color-card1;
-            font-family: courgette,arial,sans-serif;
+            font-family: $font-card1,arial,sans-serif;
             font-size: $font-size-menu-cards;
             /* Properties for the main title of the menu */
             &--main{
@@ -27,7 +27,7 @@
         &__menu{
             font-size: $font-size-menu-cards;
             color:$text-color-card1;
-            font-family: handlee,arial,sans-serif;
+            font-family: $font-menu,arial,sans-serif;
             text-transform: uppercase;
             font-weight: bold;
             font-style: italic;
@@ -37,7 +37,7 @@
         background: linear-gradient(150deg, $text-color-start-card2 0% 35%, $text-color-end-card2 65% 100% );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-family: abrilFatface,arial,sans-serif;
+        font-family: $font-card2,arial,sans-serif;
         font-weight: normal;
         &--main{
             font-size: $menu-main-title-size;
@@ -52,7 +52,7 @@
         background: linear-gradient(150deg, $text-color-start-card3 0% 35%, $text-color-end-card3 65% 100% );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-family: parisienne,arial,sans-serif;
+        font-family: $font-card3,arial,sans-serif;
         font-size: $font-size-menu-cards;
         &--main{
             font-size: $menu-main-title-size;
@@ -61,7 +61,7 @@
         &__menu{
             font-size: $font-size-menu-cards;
             color:$text-color-end-card3;
-            font-family: handlee,arial,sans-serif;
+            font-family: $font-menu,arial,sans-serif;
             font-weight: bold;
         }
     }
@@ -69,14 +69,14 @@
         background: linear-gradient(150deg, $text-color-start-card4 0% 35%, $text-color-end-card4 65% 100% );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-family: kaushan,arial,sans-serif;
+        font-family: $font-card4,arial,sans-serif;
         &--main{
             font-size: $menu-main-title-size;
         }
         &__menu{
             font-size: $font-size-menu-cards;
             color:$text-color-start-card4;
-            font-family: handlee,arial,sans-serif;
+            font-family: $font-menu,arial,sans-serif;
             font-weight: bold;
         }
 

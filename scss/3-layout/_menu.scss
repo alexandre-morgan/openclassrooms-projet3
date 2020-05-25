@@ -8,7 +8,7 @@
     &--card1{
         color:$text-color-card1;
         background-color: $color-card1;
-        font-family: handlee,arial,sans-serif;
+        font-family: $font-menu,arial,sans-serif;
         font-weight: bold;
     }
     &--card2{
@@ -41,7 +41,7 @@
     &--card3{
         background-color: $color-card3;
         font-weight: bold;
-        font-family: handlee,arial,sans-serif;
+        font-family: $font-menu,arial,sans-serif;
         &__entree{
             @include dishes-layout;
         }
@@ -49,7 +49,7 @@
     }
     &--card4{
         background-color: $color-card4;
-        font-family: handlee,arial,sans-serif;
+        font-family: $font-menu,arial,sans-serif;
         font-weight: bold;
         &__entree{
             @include dishes-layout;

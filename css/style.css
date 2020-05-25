@@ -4,6 +4,7 @@
 /*Card 2*/
 /*Card 3*/
 /*Card 4*/
+/* Font of the menu */
 /* Font size for 'menu' of cards (index.html)*/
 /* Font size of the main title of all menu (other pages) */
 /* Intensity for the wiggle animation */
@@ -210,7 +211,7 @@ footer a {
 .card-title {
   text-align: center;
   color: RGB(53, 53, 53);
-  font-family: "Montserrat", sans-serif;
+  font-family: montserrat, sans-serif;
   /* For card 1 */
 }
 .card-title--1 {
