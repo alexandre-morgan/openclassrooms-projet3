@@ -216,7 +216,7 @@ footer a {
 }
 .card-title--1 {
   /* gradient color for the icon */
-  background: linear-gradient(135deg, #EF465F 0% 35%, #F6916A 65% 100%);
+  background: linear-gradient(135deg, #EF465F 35%, #F6916A 65%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   /* Properties for the title of the card and menu */
@@ -244,7 +244,7 @@ footer a {
   font-style: italic;
 }
 .card-title--2 {
-  background: linear-gradient(150deg, #C67412 0% 35%, #6E4CCC 65% 100%);
+  background: linear-gradient(150deg, #C67412 35%, #6E4CCC 65%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: abrilFatface, arial, sans-serif;
@@ -259,7 +259,7 @@ footer a {
   color: #C67412;
 }
 .card-title--3 {
-  background: linear-gradient(150deg, #0228DD 0% 35%, #229DF9 65% 100%);
+  background: linear-gradient(150deg, #0228DD 35%, #229DF9 65%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: parisienne, arial, sans-serif;
@@ -275,7 +275,7 @@ footer a {
   font-weight: bold;
 }
 .card-title--4 {
-  background: linear-gradient(150deg, #41963C 0% 35%, #B8FA7C 65% 100%);
+  background: linear-gradient(150deg, #41963C 35%, #B8FA7C 65%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: kaushan, arial, sans-serif;
